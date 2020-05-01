@@ -1,0 +1,25 @@
+.jumbotron-main {
+    background-image: url("img/background.jpg");
+}
+
+.jumbotron-physics {
+    background-image: url("img/bg-physics.jpg");
+}
+
+.img-container {
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-adjust {
+    width: 100%;
+    height: auto;
+}
+
+.card-physics {
+    background-color: #704d9f;
+    min-height: 350px;
+}
