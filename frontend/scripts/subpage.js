@@ -3,19 +3,19 @@ function getMapData() {
         id: 0,
         title: "Name of the diagram",
         text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure saepe molestiae libero nostrum suscipit blanditiis qui consequatur eum, impedit voluptatibus id quidem eius iusto exercitationem voluptatem, cumque deleniti tenetur ducimus ut ipsa cupiditate officia repellendus accusantium. Doloremque possimus veritatis consequatur?`,
-        images: ["https://picsum.photos/300/300?random=1", "https://picsum.photos/300/300?random=2"],
+        images: ["https://picsum.photos/400/300?random=1", "https://picsum.photos/400/300?random=2"],
         nodes: [
             {
                 id: 1,
                 title: "Name of node 1",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                images: ["https://picsum.photos/300/300?random=3"],
+                images: ["https://picsum.photos/400/300?random=3"],
                 nodes: [
                     {
                         id: 3,
                         title: "Name of inner node 3",
                         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                        images: ["https://picsum.photos/300/300?random=4"],
+                        images: ["https://picsum.photos/400/300?random=4"],
                         nodes: [],
                     }
                 ]
@@ -24,13 +24,13 @@ function getMapData() {
                 id: 2,
                 title: "Name of node 2",
                 text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                images: ["https://picsum.photos/300/300?random=5"],
+                images: ["https://picsum.photos/400/300?random=5"],
                 nodes: [
                     {
                         id: 4,
                         title: "Name of node 4",
                         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                        images: ["https://picsum.photos/300/300?random=6"],
+                        images: ["https://picsum.photos/400/300?random=6"],
                         nodes: [],
                     }
                 ]
