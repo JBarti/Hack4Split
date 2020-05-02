@@ -15,7 +15,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">MINDmaps</a>
+        <a class="navbar-brand" href="#">HOME</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,28 +23,45 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Subjects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Geography</a>
+                        <a class="dropdown-item" href="#">History</a>
+                        <a class="dropdown-item" href="#">Physics</a>
+                        <a class="dropdown-item" href="#">Biology</a>
+                        <a class="dropdown-item" href="#">Math</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-sm btn-info" type="button">Log In</button>
+                <button class="btn btn-outline-primary" type="button">Log In</button>
+                <!-- Logged in user option -->
+                <!-- <div class="avatar-box mr-3">
+                    <img class="avatar" src="img/avatar.JPG" alt="avatar">
+                </div>
+                <button class="btn btn-sm btn-outline-danger" type="button">Log Out</button> -->
+                <!-- End Logged in user option -->
             </form>
         </div>
     </div>
 </nav>
 
 <!-- HEADER -->
-<div class="jumbotron jumbotron-fluid jumbotron-subject py-sm-4">
+<div class="jumbotron jumbotron-fluid jumbotron-subject py-sm-4 mb-3">
     <div class="container">
-      <h1 class="display-4 text-white">Physics</h1>
+        <h1 class="display-4 text-white">Physics</h1>
     </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb text-secondary">
+        <li class="breadcrumb-item active">First</li>
+        <li class="breadcrumb-item"><a href="#second">Second</a></li>
+    </ol>
 </div>
 
 <!-- SLIDES -->
@@ -64,45 +81,44 @@
                 </a>
             </div>
         </div>
-        <div class="col-xl-6">
-            <h2 class="main-title">Name of the card</h2>
-            <p class="main-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure saepe molestiae libero
-                nostrum suscipit blanditiis qui consequatur eum, impedit voluptatibus id quidem eius iusto
-                exercitationem voluptatem, cumque deleniti tenetur ducimus ut ipsa cupiditate officia
-                repellendus accusantium. Doloremque possimus veritatis consequatur?
-            </p>
+        <div class="col-xl-6 d-flex flex-column justify-content-between align-items-start">
+            <div>
+                <h2 class="main-title text-dark">Name of the card</h2>
+                <p class="main-text text-dark">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure saepe molestiae libero
+                    nostrum suscipit blanditiis qui consequatur eum, impedit voluptatibus id quidem eius iusto
+                    exercitationem voluptatem, cumque deleniti tenetur ducimus ut ipsa cupiditate officia
+                    repellendus accusantium. Doloremque possimus veritatis consequatur?
+                </p>
+            </div>
+            <button type="button" class="btn btn-outline-warning">Edit this Card</button>
         </div>
     </div>
 </div>
 
-<div class="container mb-5" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active">First</li>
-        <li class="breadcrumb-item"><a href="#second">Second</a></li>
-    </ol>
-</div>
-
-<!-- CARDS -->
+<!-- heading for CARDS -->
 <div class="container text-center mb-4">
-    <h2 text-dark>Let's learn more! Select another card!</h2>
+    <h2 class="text-dark">Let's learn more! Select another card!</h2>
 </div>
 
+<!-- SEARCH BOX -->
 <div class="container d-flex justify-content-center">
-    <div class="mb-5">
-        <input class="form-control form-control-sm mr-sm-5" type="search" placeholder="Search" aria-label="Search">
+    <div class="form-inline mb-5">
+        <input class="search-form form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     </div>
 </div>
 
+<!-- CARDS -->
+
 <script type="text/template" data-template="node-card">
     <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
-        <div class="card">
+        <div class="card h-100">
             <div class="img-container rounded-top">
                 <img src="img/ph-1.jpg" class="card-img-adjust card-img-top" alt="card">
             </div>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                <h5 class="card-title text-dark">Card title</h5>
+                <p class="card-text text-secondary">Some quick example text to build on the card title and make up the bulk of the
                     card's content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
@@ -113,10 +129,12 @@
     <div class="row">
         <!-- Add New Card card -->
         <div class="col-sm-6 col-lg-4 col-xl-3 mb-3 node-new">
-            <div class="card card-physics text-white">
+            <div class="card card-new py-4 h-100 text-white">
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <h5 class="card-title h1 text-center text-light">Create a new card!</h5>
-                    <a href="#" class="btn btn-lg btn-light mt-2">Add New</a>
+                    <button type="button" class="btn btn-lg btn-light mt-2" data-toggle="modal"
+                            data-target="#addCardModal">Add new
+                    </button>
                 </div>
             </div>
         </div>
@@ -135,12 +153,51 @@
     </div>
 </footer>
 
+<!-- MODALS -->
+<div class="modal fade" id="addCardModal" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add new card</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Description:</label>
+                        <textarea class="form-control" id="message-text"></textarea>
+                    </div>
 
-<!-- Optional JavaScript -->
+                    <div class="form-group file-input-group">
+                        <div class="form-control file-label custom-img-imput">
+                            <div class="row no-gutters file-previews"></div>
+                        </div>
+                        <a class="btn btn-primary custom-img-imput-btn file-input-trigger text-white">Choose a file</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary form-post">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="./scripts/addCardModalSetup.js"></script>
+<script src="./scripts/cardSearchSetup.js"></script>
 <script src="./scripts/templates.js"></script>
 <script src="./scripts/subpage.js"></script>
 </body>

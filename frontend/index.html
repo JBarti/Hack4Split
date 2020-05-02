@@ -13,40 +13,49 @@
       <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">MINDmaps</a>
+            <a class="navbar-brand" href="#">HOME</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
         
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Subjects
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Geography</a>
+                          <a class="dropdown-item" href="#">History</a>
+                          <a class="dropdown-item" href="#">Physics</a>
+                          <a class="dropdown-item" href="#">Biology</a>
+                          <a class="dropdown-item" href="#">Math</a>
+                      </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-sm btn-info" type="button">Log In</button>
+                    <button class="btn btn-outline-primary" type="button">Log In</button>
+                    <!-- Logged in user option -->
+                    <!-- <div class="avatar-box mr-3">
+                        <img class="avatar" src="img/avatar.JPG" alt="avatar">
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger" type="button">Log Out</button> -->
+                    <!-- End Logged in user option -->
                 </form>
             </div>
         </div>
     </nav>
-        <!-- HEADER -->
+        <!-- BANNER -->
     <div class="jumbotron jumbotron-main jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4 text-white">What do I want to learn today?</h1>
-          <p class="lead text-white">Select a card to start!</p>
+          <h1 class="display-4 text-light banner-text">What do I want to learn today?</h1>
+          <p class="lead text-light banner-text">Select a card to start!</p>
         </div>
     </div>
+
+        <!-- SEARCH BOX -->
     <div class="container d-flex justify-content-center">
         <form class="form-inline mb-4">
-            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-info btn-sm my-2 my-sm-0" type="submit">Search</button>
+            <input class="search-form form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         </form>
     </div>
         <!-- CARDS -->
@@ -55,86 +64,90 @@
             <!-- Repeatable card block -->
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                 <div class="card">
-                    <div class="img-container rounded-top">
+                    <div class="img-container img-container-test rounded-top">
                         <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Physics</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
                     </div>
                 </div>
             </div>
             <!-- End of the repeatable card block -->
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                 <div class="card">
-                    <div class="img-container rounded-top">
-                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
+                    <div class="img-container img-container-test rounded-top">
+                        <img src="img/history.jpg" class="card-img-adjust card-img-top" alt="card">
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                <div class="card">
-                    <div class="img-container rounded-top">
-                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">History</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                 <div class="card">
-                    <div class="img-container rounded-top">
-                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
+                    <div class="img-container img-container-test img-container-math rounded-top">
+                        <!-- <img src="..." class="card-img-adjust card-img-top" alt="card"> -->
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                <div class="card">
-                    <div class="img-container rounded-top">
-                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Math</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                 <div class="card">
-                    <div class="img-container rounded-top">
-                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
+                    <div class="img-container img-container-test img-container-geo rounded-top">
+                        <img src="img/geography.jpg" class="card-img-adjust card-img-top" alt="card">
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Geography</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                 <div class="card">
-                    <div class="img-container rounded-top">
+                    <div class="img-container img-container-test rounded-top">
                         <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
                     </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Physics</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                <div class="card">
+                    <div class="img-container img-container-test rounded-top">
+                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Physics</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                <div class="card">
+                    <div class="img-container img-container-test rounded-top">
+                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Physics</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                <div class="card">
+                    <div class="img-container img-container-test rounded-top">
+                        <img src="img/physics.jpg" class="card-img-adjust card-img-top" alt="card">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title h2 text-dark">Physics</h5>
+                        <a href="#" class="btn btn-primary">Start learning!</a>
                     </div>
                 </div>
             </div>

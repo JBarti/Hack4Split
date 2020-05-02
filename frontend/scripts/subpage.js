@@ -39,15 +39,15 @@ function getMapData() {
     }
 }
 
-function createNodeCard({title, text, images, nodes}) {
+function createNodeCard({id, title, text, images, nodes}) {
     let $nodeCard = $($.parseHTML(nodeCardTemplate));
     $nodeCard.find("img").attr("src", images[0]);
     $nodeCard.find(".card-title").text(title);
     $nodeCard.find(".card-text").text(text);
-    $nodeCard.data({"self": {title, text, images, nodes}});
+    $nodeCard.data({"self": {id, title, text, images, nodes}});
 
     $nodeCard.find(".node-visit").on("click", () => {
-        displayCard({title, text, images, nodes});
+        displayCard({id, title, text, images, nodes});
     });
     return $nodeCard;
 }
@@ -70,7 +70,58 @@ function clearOldNodeCards() {
 }
 
 
-function displayCard({title, text, images, nodes}) {
+function breadcrumbClick() {
+    const $breadcrumbs = $(".breadcrumb");
+    const $clickedBreadcrumb = $(this);
+    let breadcrumbState = $breadcrumbs.data("state");
+
+    const clickedIndex = breadcrumbState.findIndex((nodeData) =>
+        nodeData.id == $clickedBreadcrumb.attr("data-node-id")
+    );
+
+    breadcrumbState = breadcrumbState.slice(0, clickedIndex + 1);
+    $breadcrumbs.data("state", breadcrumbState);
+
+    displayCard(breadcrumbState.pop());
+}
+
+function refreshBreadcrumbs() {
+    const $breadcrumbs = $(".breadcrumb");
+    $breadcrumbs.children().remove();
+    const breadcrumbState = $breadcrumbs.data("state");
+    const indexFinal = breadcrumbState.length - 1;
+
+
+    breadcrumbState.forEach((nodeData, index) => {
+        const $breadcrumb = $($.parseHTML(breadcrumbTemplate));
+
+        const $link = $breadcrumb.find("a");
+        $link.text(nodeData.title);
+        if (index !== indexFinal) {
+            $link.attr("href", `#${nodeData.id}`);
+            $link.attr("data-node-id", nodeData.id);
+            $link.on("click", breadcrumbClick);
+
+        } else $link.removeAttr("href");
+
+        $breadcrumbs.append($breadcrumb);
+    });
+
+
+}
+
+
+function updateBreadcrumbs(nodeData) {
+    const $breadcrumbs = $(".breadcrumb");
+    const breadcrumbState = $breadcrumbs.data("state") || [];
+    breadcrumbState.push(nodeData);
+    $breadcrumbs.data("state", breadcrumbState);
+
+    refreshBreadcrumbs();
+}
+
+
+function displayCard({id, title, text, images, nodes}, shouldUpdateBreadcrumbs = true) {
     const $nodeMain = $(".node-main");
     $nodeMain.find("h2").text(title);
     $nodeMain.find(".main-text").text(text);
@@ -85,29 +136,13 @@ function displayCard({title, text, images, nodes}) {
     });
 
     updateSlideshow(images);
-}
-
-
-function enableSearch() {
-    const $searchBar = $("input[type=search]");
-    $searchBar.on("change keyup paste", function () {
-        const value = $(this).val().toLowerCase();
-        $(".nodes-container .row .node-card").filter(function () {
-            const isAddNewCard = $(this).hasClass("node_new");
-            if (isAddNewCard) return;
-            if ($(this).find(".card-title").text().toLowerCase().indexOf(value) > -1) {
-                $(this).fadeIn(400);
-            } else {
-                $(this).fadeOut(400);
-            }
-
-        })
-    })
+    if (shouldUpdateBreadcrumbs) updateBreadcrumbs({id, title, text, images, nodes});
 }
 
 
 $(function () {
     const data = getMapData();
     displayCard(data);
-    enableSearch();
+    cardSearchSetup();
+    addCardModalSetup();
 });
