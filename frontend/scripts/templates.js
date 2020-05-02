@@ -14,3 +14,5 @@ const nodeCardTemplate = `<div class="col-sm-6 col-lg-4 col-xl-3 mb-3 node-card"
                 </div>
             </div>
         </div>`;
+
+const breadcrumbTemplate = `<li class="breadcrumb-item"><a href="{url}" node-id="{nodeId}">{title}</a></li>`;
