@@ -15,36 +15,51 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">MINDmaps</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand" href="#">HOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
         </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Subjects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Geography</a>
+                      <a class="dropdown-item" href="#">History</a>
+                      <a class="dropdown-item" href="#">Physics</a>
+                      <a class="dropdown-item" href="#">Biology</a>
+                      <a class="dropdown-item" href="#">Math</a>
+                  </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-sm btn-info" type="button">Log In</button>
+                <button class="btn btn-outline-primary" type="button">Log In</button>
+                <!-- Logged in user option -->
+                <!-- <div class="avatar-box mr-3">
+                    <img class="avatar" src="img/avatar.JPG" alt="avatar">
+                </div>
+                <button class="btn btn-sm btn-outline-danger" type="button">Log Out</button> -->
+                <!-- End Logged in user option -->
             </form>
         </div>
     </div>
 </nav>
 
 <!-- HEADER -->
-<div class="jumbotron jumbotron-fluid jumbotron-subject py-sm-4">
+<div class="jumbotron jumbotron-fluid jumbotron-subject py-sm-4 mb-3">
     <div class="container">
         <h1 class="display-4 text-white">Physics</h1>
     </div>
+</div>
+
+<!-- BREADCRUMBS -->
+<div class="container mb-5" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">First</li>
+        <li class="breadcrumb-item"><a href="#second">Second</a></li>
+    </ol>
 </div>
 
 <!-- SLIDES -->
@@ -76,24 +91,20 @@
     </div>
 </div>
 
-<!-- BREADCRUMBS -->
-<div class="container mb-5" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active">First</li>
-        <li class="breadcrumb-item"><a href="#second">Second</a></li>
-    </ol>
-</div>
-
-<!-- CARDS -->
+<!-- heading for CARDS -->
 <div class="container text-center mb-4">
     <h2 text-dark>Let's learn more! Select another card!</h2>
 </div>
 
+<!-- SEARCH BOX -->
 <div class="container d-flex justify-content-center">
-    <div class="mb-5">
-        <input class="form-control form-control-sm mr-sm-5" type="search" placeholder="Search" aria-label="Search">
-    </div>
+    <form class="form-inline mb-4">
+        <input class="search-form form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary btn-sm my-2 my-sm-0" type="submit">Search</button>
+    </form>
 </div>
+
+<!-- CARDS -->
 
 <script type="text/template" data-template="node-card">
     <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
