@@ -27,7 +27,6 @@ const filePreviewTemplate = `<div class="col-md-12" data-file-index="{fileIndex}
                                         <div class="col-md-4"><a class="btn btn-primary text-white file-remove">X</a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>`;
+                                </div>`;
 
 const fileInputTemplate = `<input type="file" data-file-index="{fileIndex}" style="display: none;">`;

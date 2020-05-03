@@ -6,6 +6,11 @@
     background-size: cover;
 }
 
+.jumbotron-user {
+    background-image: url("img/background2.jpg");
+    background-position: center;
+}
+
 .banner-text {
     text-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
 }
