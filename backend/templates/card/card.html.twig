@@ -81,6 +81,8 @@
         </div>
     </section>
 
+    <span class="hidden js-card-tree">{{ card.toJSONArray()|json_encode() }}</span>
+
     {{ include('common/footer.html.twig') }}
 {% endblock body %}
 

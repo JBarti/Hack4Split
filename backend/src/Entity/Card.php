@@ -105,4 +105,24 @@ class Card
     {
         return $this->subject;
     }
+
+    public function toJSONArray(): array
+    {
+        return $this->getTreeStructureAsJSONArray($this);
+    }
+
+    private function getTreeStructureAsJSONArray(Card $card): array
+    {
+        return [
+            'id' => $card->getId(),
+            'title' => $card->getTitle(),
+            'text' => $card->getDescription(),
+            'images' => array_map(function (CardImage $image) {
+                return $image->getPath();
+            }, $card->getImages()),
+            'nodes' => array_map(function (Card $subcard) {
+                return $this->getTreeStructureAsJSONArray($subcard);
+            }, $card->getSubcards()),
+        ];
+    }
 }
