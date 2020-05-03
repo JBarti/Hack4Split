@@ -1,3 +1,11 @@
+/* COLORS
+red: #DF0443;
+green: #00B163;
+blue: #00AFD7;
+orange: #FF7544;
+yellow: #FFC34B;
+purple: #704d9f; */
+
 /* Home page */
 .jumbotron-main {
     background-image: url("img/background2.jpg");
@@ -13,8 +21,12 @@
 /* Subject page */
 .jumbotron-subject {
     background-image: url("img/bg-physics.jpg");
-    background-position: center;
+    background-position: center right;
 }
+@media only screen and (max-width: 768px) {
+    .jumbotron-subject {
+        background-position: 75% center;
+    } }
 
 /* Cards */
 .img-container {
