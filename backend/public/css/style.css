@@ -1,0 +1,90 @@
+/* Home page */
+.jumbotron-main {
+    background-image: url("img/background2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-text {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+/* Subject page */
+.jumbotron-subject {
+    background-image: url("img/bg-physics.jpg");
+    background-position: center;
+}
+
+/* Cards */
+.img-container {
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-adjust {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container-home {
+    height: 250px;
+}
+
+/* Add new Card */
+.card-new {
+    /* subject color */
+    background-color: #704d9f;
+}
+
+/* Remove this when we have an image */
+.img-container-math {
+    background-color: #00B163;
+}
+
+@media only screen and (min-width: 768px) {
+    .search-form {
+        width: 400px !important; } }
+
+/* avatar */
+.avatar-box {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Add new card form */
+.custom-img-imput {
+    height: fit-content;
+}
+
+.file-previews {
+    min-height: 20px;
+}
+
+.custom-img-imput-btn {
+    margin-top: 10px;
+}
+
+/* icons */
+.icon {
+    height: 2rem;
+    width: 2rem;
+    fill: #FFC34B;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+}

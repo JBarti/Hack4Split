@@ -1,0 +1,13 @@
+<div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
+    <div class="card">
+        <div class="img-container img-container-test rounded-top">
+            <img src="{{ asset('img/' ~ subject.getName() ~ '.jpg') }}" class="card-img-adjust card-img-top" alt="card">
+        </div>
+        <div class="card-body text-center">
+            <h5 class="card-title h2 text-dark">{{ subject.getName()|capitalize }}</h5>
+            <a href="{{ path('app_main_show_subject', {'subject': subject.getName()}) }}" class="btn btn-primary">
+                Start learning!
+            </a>
+        </div>
+    </div>
+</div>
