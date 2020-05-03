@@ -20,7 +20,7 @@ purple: #704d9f; */
 
 /* Subject page */
 .jumbotron-subject {
-    background-image: url("img/bg-physics.jpg");
+    background-image: url("img/bg-chemistry.jpg");
     background-position: center right;
 }
 @media only screen and (max-width: 768px) {
@@ -46,16 +46,15 @@ purple: #704d9f; */
 .img-container-home {
     height: 250px;
 }
+@media only screen and (max-width: 576px) {
+    .img-container-home {
+        height: 300px;
+    } }
 
 /* Add new Card */
 .card-new {
     /* subject color */
     background-color: #704d9f;
-}
-
-/* Remove this when we have an image */
-.img-container-math {
-    background-color: #00B163;
 }
 
 @media only screen and (min-width: 768px) {
