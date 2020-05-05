@@ -16,19 +16,19 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {% for subject in subjects %}
                             <a class="dropdown-item"
-                                href="{{ path('app_main_show_subject', {'subject': subject.getName()|capitalize }) }}">
-                                {{ subject.getName() }}
+                                href="{{ path('app_main_show_subject', {'subject': subject.getName() }) }}">
+                                {{ subject.getName()|capitalize }}
                             </a>
                         {% endfor %}
                     </div>
                   </li>
             </ul>
             <!-- Logged in user option -->
-            <div>You are logged in as {{ app.user.getName() }}</div>
+            <div class="mx-2">You are logged in as {{ app.user.getName() }}</div>
             <!-- <div class="avatar-box mr-3">
                 <img class="avatar" src="img/avatar.JPG" alt="avatar">
             </div> -->
-            <button class="btn btn-sm btn-outline-danger" type="button">Log Out</button>
+            <a href="{{ path('app_logout') }}" class="btn btn-sm btn-outline-danger">Log Out</a>
             <!-- End Logged in user option -->
         </div>
     </div>

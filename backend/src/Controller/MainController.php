@@ -28,7 +28,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/maps/{subject}/", name="show_subject")
+     * @Route("/{subject}/maps/", name="show_subject")
      */
     public function showSubject(string $subject): Response
     {
@@ -46,7 +46,7 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/maps/{subject}/{cardId}", name="show_card")
+     * @Route("/{subject}/maps/{cardId}", name="show_card")
      */
     public function showCard(string $subject, int $cardId): Response
     {

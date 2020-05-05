@@ -9,12 +9,19 @@
 {% block body %}
     {{ include('common/navbar.html.twig', {'subjects': subjects}) }}
 
+    {% set bannerBgImage = 'img/bg-' ~ selectedSubject.getName() ~ '.jpg' %}
     <!-- HEADER -->
-    <div class="jumbotron jumbotron-fluid jumbotron-subject">
+    <div class="jumbotron jumbotron-fluid jumbotron-subject bg-secondary"
+        style="{{ 'background-image: url(' ~ asset(bannerBgImage) ~ ');' }}">
         <div class="container">
-          <h1 class="display-4 text-white">{{ selectedSubject.getName()|capitalize }}</h1>
-          <p class="lead text-white">Select a card to learn more!</p>
+          <h1 class="display-4 text-white banner-text">{{ selectedSubject.getName()|capitalize }}</h1>
+          <p class="lead text-white banner-text">Select a card to learn more!</p>
         </div>
+    </div>
+
+    <!-- heading for CARDS -->
+    <div class="container text-center text-dark mb-4">
+        <h2>Choose what you want to learn about!</h2>
     </div>
 
     {{ include('common/search-box.html.twig') }}
@@ -29,7 +36,7 @@
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                 <div class="card card-new py-4 text-white h-100">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                        <h5 class="card-title h1 text-center text-light">Create a new card!</h5>
+                        <h5 class="card-title h1 text-center text-light banner-text">Create a new card!</h5>
                         <a href="#" class="btn btn-lg btn-light mt-2">Add New</a>
                     </div>
                 </div>
@@ -39,6 +46,7 @@
     </section>
 
     {{ include('common/footer.html.twig') }}
+    {{ include('common/modals.html.twig') }}
 {% endblock body %}
 
 {% block javascripts %}
