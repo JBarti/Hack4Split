@@ -8,99 +8,112 @@ purple: #704d9f; */
 
 /* Home page */
 .jumbotron-main {
-    /* background-image: url("img/background2.jpg"); */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* background-image: url("img/background2.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbotron-user {
-    background-image: url("img/background2.jpg");
-    background-position: center;
+  background-image: url("img/background2.jpg");
+  background-position: center;
 }
 
 .banner-text {
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Subject page */
 .jumbotron-subject {
-    /* background-image: url("img/bg-chemistry.jpg"); */
-    background-position: center right;
+  /* background-image: url("img/bg-chemistry.jpg"); */
+  background-position: center right;
 }
 @media only screen and (max-width: 768px) {
-    .jumbotron-subject {
-        background-position: 75% center;
-    } }
+  .jumbotron-subject {
+    background-position: 75% center;
+  }
+}
 
 /* Cards */
 .img-container {
-    overflow: hidden;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card-img-adjust {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .img-container-home {
-    height: 250px;
+  height: 250px;
 }
 @media only screen and (max-width: 576px) {
-    .img-container-home {
-        height: 300px;
-    } }
+  .img-container-home {
+    height: 300px;
+  }
+}
 
 /* Add new Card */
 .card-new {
-    /* subject color */
-    background-color: #704d9f;
+  /* subject color */
+  background-color: #704d9f;
 }
 
 @media only screen and (min-width: 768px) {
-    .search-form {
-        width: 400px !important; } }
+  .search-form {
+    width: 400px !important;
+  }
+}
 
 /* avatar */
 .avatar-box {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #007bff;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
 }
 .avatar {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 /* Add new card form */
 .custom-img-imput {
-    height: fit-content;
+  height: fit-content;
 }
 
 .file-previews {
-    min-height: 20px;
+  min-height: 20px;
 }
 
 .custom-img-imput-btn {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* icons */
 .icon {
-    height: 2rem;
-    width: 2rem;
-    fill: #FFC34B;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 5px;
+  height: 2rem;
+  width: 2rem;
+  fill: #ffc34b;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+}
+
+/* error pages */
+.full-height {
+  min-height: calc(100vh - 144px);
+  background-position: center;
+}
+.error-msg-btn {
+  display: block;
 }
