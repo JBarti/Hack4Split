@@ -30,3 +30,11 @@ const filePreviewTemplate = `<div class="col-md-12" data-file-index="{fileIndex}
                                 </div>`;
 
 const fileInputTemplate = `<input type="file" data-file-index="{fileIndex}" style="display: none;">`;
+
+const fileUpdateTemplate = `<li class="media" data-image-name="{imageName}">
+                                <img src="./img/imageIcon.png" class="mr-3" style="width:40px">
+                                <div class="media-body">
+                                    {fileName}
+                                </div>
+                                <button class="file-delete btn">X</button>
+                            </li>`;

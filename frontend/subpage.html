@@ -74,8 +74,8 @@
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                  </ol>
-                  <!-- end slide indicators -->
+                </ol>
+                <!-- end slide indicators -->
                 <div class="carousel-inner">
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -88,8 +88,37 @@
                 </a>
             </div>
         </div>
+        <!-- CARD UPDATE FORM -->
+        <form class="change-card-content col-xl-12" action="#">
+            <div class="row">
+                <div class="form-group file-input-group col-xl-6">
+                    <ul class="list-unstyled image-list">
+                        <li class="media">
+                    </ul>
+                    <a class="btn btn-primary new-img-btn file-input-trigger text-white">Choose a file</a>
+                </div>
+                <div class="col-xl-6 d-flex flex-column">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="card-title-edit" name="title" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                    <textarea class="form-control" id="card-text-edit" name="description" autocomplete="off"
+                              style="height: 260px; resize: none"></textarea>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-outline-primary apply-edit-btn">
+                            Submit edit
+                        </button>
+                        <button type="button" class="btn btn-sm btn-outline-danger cancel-edit-btn">
+                            Cancel edit
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
         <div class="col-xl-6 d-flex flex-column justify-content-between align-items-start">
-            <div>
+            <div class="current-card-content">
                 <h2 class="main-title text-dark">Name of the card</h2>
                 <p class="main-text text-dark">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure saepe molestiae libero
@@ -99,8 +128,8 @@
                 </p>
             </div>
             <div>
-                <button type="button" class="btn btn-sm btn-outline-warning">Edit this Card</button>
-                <button type="button" class="btn btn-sm btn-outline-danger">Delete this Card</button>
+                <button type="button" class="btn btn-sm btn-outline-warning edit-btn">Edit this Card</button>
+                <button type="button" class="btn btn-sm btn-outline-danger delete-btn">Delete this Card</button>
             </div>
         </div>
     </div>
@@ -114,7 +143,8 @@
 <!-- SEARCH BOX -->
 <div class="container d-flex justify-content-center">
     <div class="form-inline mb-5">
-        <input class="search-form form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="search-form form-control form-control-sm mr-sm-2" type="search" placeholder="Search"
+               aria-label="Search">
     </div>
 </div>
 
@@ -159,21 +189,22 @@
                 </button>
             </div>
             <div class="modal-body">
+                <!-- CARD ADD FORM -->
                 <form action="#" method="post">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Title:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <label for="card-title" class="col-form-label">Title:</label>
+                        <input type="text" class="form-control" id="card-title" maxlength="50">
                     </div>
                     <div class="form-group">
-                        <label for="message-text" class="col-form-label">Description:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <label for="card-text" class="col-form-label">Description:</label>
+                        <textarea class="form-control" id="card-text" maxlength="255"></textarea>
                     </div>
 
                     <div class="form-group file-input-group">
-                        <div class="form-control file-label custom-img-imput">
+                        <div class="form-control file-label custom-img-input">
                             <div class="row no-gutters file-previews"></div>
                         </div>
-                        <a class="btn btn-primary custom-img-imput-btn file-input-trigger text-white">Choose a file</a>
+                        <a class="btn btn-primary custom-img-input-btn file-input-trigger text-white">Choose a file</a>
                     </div>
                 </form>
             </div>
